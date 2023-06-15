@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 body{
-    background-color: cornflowerblue;
-    color: white;
+    height: 100vh;
+}
+#root{
+    height: 100%;
 }
