@@ -6,7 +6,11 @@ export default {
   ],
   theme: {
     extend: {},
-  },
-  plugins: [],
+    fontFamily: {
+      'UbuntuRegular': 'Ubuntu-Regular',
+      'UbuntuMedium': 'Ubuntu-Medium',
+      'UbuntuBold': 'Ubuntu-Bold',
+    },
+    plugins: [],
+  }
 }
-
