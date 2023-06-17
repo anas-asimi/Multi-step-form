@@ -13,6 +13,11 @@ export default function App() {
   and last one (thanks page) is 5
    */
   let [progress, setProgress] = useState(1);
+  let [data, setData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+  });
   function next() {
     if (progress == 5) return;
     setProgress((progress) => progress + 1);
@@ -21,25 +26,57 @@ export default function App() {
     if (progress == 1) return;
     setProgress((progress) => progress - 1);
   }
+  // update user data based on inputs change
+  function changeHandler(event) {
+    const target = event.target;
+    const value = target.type === "checkbox" ? target.checked : target.value;
+    const name = target.name;
+    setData({
+      ...data,
+      [name]: value,
+    });
+  }
   return (
-    <main className="flex w-full max-w-[1000px] bg-white m-4 p-4 pr-0">
+    <main className="m-4 flex w-full max-w-[1000px] bg-white p-4 pr-0">
       <Progress progress={progress} />
       <div className="flex w-full flex-col justify-between px-24 py-4">
         {progress == 1 ? (
-          <Info progress={progress} back={back} next={next} />
+          <Info
+            progress={progress}
+            changeHandler={changeHandler}
+            back={back}
+            next={next}
+            {...data}
+          />
         ) : null}
         {progress == 2 ? (
-          <Plan progress={progress} back={back} next={next} />
+          <Plan
+            progress={progress}
+            changeHandler={changeHandler}
+            back={back}
+            next={next}
+            {...data}
+          />
         ) : null}
         {progress == 3 ? (
-          <Add_ons progress={progress} back={back} next={next} />
+          <Add_ons
+            progress={progress}
+            changeHandler={changeHandler}
+            back={back}
+            next={next}
+            {...data}
+          />
         ) : null}
         {progress == 4 ? (
-          <Summary progress={progress} back={back} next={next} />
+          <Summary
+            progress={progress}
+            changeHandler={changeHandler}
+            back={back}
+            next={next}
+            {...data}
+          />
         ) : null}
-        {progress == 5 ? (
-          <Thank />
-        ) : null}
+        {progress == 5 ? <Thank /> : null}
       </div>
     </main>
   );
