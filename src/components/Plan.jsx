@@ -1,34 +1,24 @@
-export default function Plan({ progress, next, back }) {
+export default function Plan({  next, back }) {
   return (
     <>
-      <div className="mt-8 h-full">
-        <h1 className="mb-2 font-UbuntuBold text-3xl text-blue-700">
+      <div className="h-full w-full">
+        <h1 className="mt-8 font-UbuntuBold text-3xl text-blue-700">
           Select your plan
         </h1>
-        <p className="mb-8 text-gray-500">
+        <p className="mb-8 mt-2 text-gray-500">
           You have the option of monthly or yearly billing.
         </p>
         {/* put the form here */}
       </div>
       <div className="controll flex w-full">
         <button
-          className={
-            "mr-auto select-none rounded-md px-8 py-2 capitalize " +
-            (progress == 1
-              ? "cursor-not-allowed bg-transparent text-gray-600"
-              : "bg-blue-600 text-white")
-          }
+          className="mr-auto select-none rounded-md bg-transparent px-8 py-2 capitalize text-gray-600"
           onClick={back}
         >
           go back
         </button>
         <button
-          className={
-            "ml-auto select-none rounded-md px-8 py-2 capitalize " +
-            (progress == 5
-              ? "cursor-not-allowed bg-transparent text-gray-600"
-              : "bg-blue-600 text-white")
-          }
+          className="ml-auto select-none rounded-md bg-blue-600 px-8 py-2 capitalize text-white"
           onClick={next}
         >
           next step

@@ -1,4 +1,4 @@
-export default function Info({ progress, next, back }) {
+export default function Info({ next, back }) {
   return (
     <>
       <div className="h-full w-full">
@@ -53,23 +53,13 @@ export default function Info({ progress, next, back }) {
       </div>
       <div className="controll flex w-full">
         <button
-          className={
-            "mr-auto select-none rounded-md px-8 py-2 capitalize " +
-            (progress == 1
-              ? "cursor-not-allowed bg-transparent text-gray-600"
-              : "bg-blue-600 text-white")
-          }
+          className="mr-auto select-none rounded-md bg-transparent px-8 py-2 capitalize text-gray-600"
           onClick={back}
         >
           go back
         </button>
         <button
-          className={
-            "ml-auto select-none rounded-md px-8 py-2 capitalize " +
-            (progress == 5
-              ? "cursor-not-allowed bg-transparent text-gray-600"
-              : "bg-blue-600 text-white")
-          }
+          className="ml-auto select-none rounded-md bg-blue-600 px-8 py-2 capitalize text-white"
           onClick={next}
         >
           next step

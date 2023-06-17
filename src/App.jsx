@@ -38,7 +38,7 @@ export default function App() {
           <Summary progress={progress} back={back} next={next} />
         ) : null}
         {progress == 5 ? (
-          <Thank progress={progress} back={back} next={next} />
+          <Thank />
         ) : null}
       </div>
     </main>
