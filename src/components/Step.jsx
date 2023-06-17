@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 export default function Step(props) {
   return (
-    <div className="flex items-center gap-4 uppercase">
+    <div className="flex w-max items-center gap-4 uppercase">
       <div
         className={
           "flex aspect-square h-12 items-center justify-center rounded-full border-2 border-blue-300 font-UbuntuMedium text-xl " +

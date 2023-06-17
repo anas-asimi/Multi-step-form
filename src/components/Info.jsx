@@ -1,12 +1,11 @@
-/* eslint-disable react/prop-types */
 export default function Info({ progress, next, back }) {
   return (
     <>
-      <div className="mt-8 h-full">
-        <h1 className="font-UbuntuBold text-3xl text-blue-700 mb-2">
+      <div className="h-full w-full">
+        <h1 className="mt-8 font-UbuntuBold text-3xl text-blue-700">
           Personnel info
         </h1>
-        <p className="mb-8 text-gray-500">
+        <p className="mb-8 mt-2 text-gray-500">
           Please provide your name, email address, and phone number.
         </p>
         <div className="input-wrapper mb-4">

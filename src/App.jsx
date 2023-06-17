@@ -22,9 +22,9 @@ export default function App() {
     setProgress((progress) => progress - 1);
   }
   return (
-    <main className="flex bg-white p-4">
+    <main className="flex w-full max-w-[1000px] bg-white m-4 p-4 pr-0">
       <Progress progress={progress} />
-      <div className="flex w-[800px] flex-col justify-between px-24 py-4">
+      <div className="flex w-full flex-col justify-between px-24 py-4">
         {progress == 1 ? (
           <Info progress={progress} back={back} next={next} />
         ) : null}

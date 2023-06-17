@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import Step from "./Step";
 
 export default function Progress({ progress }) {
