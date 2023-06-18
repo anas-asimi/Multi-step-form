@@ -12,7 +12,7 @@ export default function App() {
   first page is 1
   and last one (thanks page) is 5
    */
-  let [progress, setProgress] = useState(3);
+  let [progress, setProgress] = useState(1);
   let [data, setData] = useState({
     name: "",
     email: "",
