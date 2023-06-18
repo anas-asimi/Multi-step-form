@@ -17,6 +17,7 @@ export default function App() {
     name: "",
     email: "",
     phone: "",
+    plan: "arcade",
   });
   function next() {
     if (progress == 5) return;
@@ -42,7 +43,6 @@ export default function App() {
       <div className="flex w-full flex-col justify-between px-24 py-4">
         {progress == 1 ? (
           <Info
-            progress={progress}
             changeHandler={changeHandler}
             back={back}
             next={next}
@@ -51,7 +51,6 @@ export default function App() {
         ) : null}
         {progress == 2 ? (
           <Plan
-            progress={progress}
             changeHandler={changeHandler}
             back={back}
             next={next}
@@ -60,7 +59,6 @@ export default function App() {
         ) : null}
         {progress == 3 ? (
           <Add_ons
-            progress={progress}
             changeHandler={changeHandler}
             back={back}
             next={next}
@@ -69,7 +67,6 @@ export default function App() {
         ) : null}
         {progress == 4 ? (
           <Summary
-            progress={progress}
             changeHandler={changeHandler}
             back={back}
             next={next}
