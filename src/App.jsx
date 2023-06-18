@@ -12,13 +12,16 @@ export default function App() {
   first page is 1
   and last one (thanks page) is 5
    */
-  let [progress, setProgress] = useState(2);
+  let [progress, setProgress] = useState(3);
   let [data, setData] = useState({
     name: "",
     email: "",
     phone: "",
     plan: "arcade",
     monthly: true,
+    online_service: false,
+    larger_storage: false,
+    customizable_profile: false,
   });
   function next() {
     if (progress == 5) return;
@@ -39,7 +42,7 @@ export default function App() {
     });
   }
   return (
-    <main className="m-4 flex w-full max-w-[1000px] bg-white p-4 pr-0">
+    <main className="rounded-md m-4 flex w-full max-w-[1000px] bg-white p-4 pr-0">
       <Progress progress={progress} />
       <div className="flex w-full flex-col justify-between px-24 py-4">
         {progress == 1 ? (

@@ -8,8 +8,8 @@ export default function Plan({ next, back, changeHandler, plan, monthly }) {
         <p className="mb-8 mt-2 text-gray-500">
           You have the option of monthly or yearly billing.
         </p>
-        {/* put the form here */}
         <fieldset className="input-wrapper flex gap-4">
+          {/* ===================== */}
           <div className="h-[180px] w-full">
             <input
               className="peer hidden"
@@ -36,7 +36,7 @@ export default function Plan({ next, back, changeHandler, plan, monthly }) {
               <p className="text-gray-500">{monthly ? "$9/mo" : "$90/yr"}</p>
             </label>
           </div>
-
+          {/* ===================== */}
           <div className="h-[180px] w-full">
             <input
               className="peer hidden"
@@ -63,7 +63,7 @@ export default function Plan({ next, back, changeHandler, plan, monthly }) {
               <p className="text-gray-500">{monthly ? "$12/mo" : "$120/yr"}</p>
             </label>{" "}
           </div>
-
+          {/* ===================== */}
           <div className="h-[180px] w-full">
             <input
               className="peer hidden"
@@ -88,8 +88,9 @@ export default function Plan({ next, back, changeHandler, plan, monthly }) {
                 Pro
               </p>
               <p className="text-gray-500">{monthly ? "$15/mo" : "$150/yr"}</p>
-            </label>{" "}
+            </label>
           </div>
+          {/* ===================== */}
         </fieldset>
         <div className="mt-6 flex items-center justify-center gap-4 rounded-md bg-gray-100 py-2 font-UbuntuMedium">
           <input
