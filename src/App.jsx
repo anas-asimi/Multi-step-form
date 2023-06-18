@@ -4,7 +4,7 @@ import Info from "./components/Info";
 import Plan from "./components/Plan";
 import Add_ons from "./components/Add_ons";
 import Summary from "./components/Summary";
-import Thank from "./components/thank";
+import Thank from "./components/Thank";
 
 export default function App() {
   /*
