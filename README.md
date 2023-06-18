@@ -39,7 +39,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Add live site URL here](https://anas-multi-step-form.netlify.app/)
 
 ## My process
 
@@ -49,7 +49,6 @@ Users should be able to:
 - Tailwindcss
 - Prettier 
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
 
