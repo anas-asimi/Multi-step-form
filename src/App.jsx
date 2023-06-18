@@ -12,12 +12,13 @@ export default function App() {
   first page is 1
   and last one (thanks page) is 5
    */
-  let [progress, setProgress] = useState(1);
+  let [progress, setProgress] = useState(2);
   let [data, setData] = useState({
     name: "",
     email: "",
     phone: "",
     plan: "arcade",
+    monthly: true,
   });
   function next() {
     if (progress == 5) return;

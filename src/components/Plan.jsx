@@ -1,4 +1,4 @@
-export default function Plan({ next, back, changeHandler }) {
+export default function Plan({ next, back, changeHandler, plan, monthly }) {
   return (
     <>
       <div className="h-full w-full">
@@ -18,10 +18,10 @@ export default function Plan({ next, back, changeHandler }) {
               id="arcade"
               value="arcade"
               onChange={changeHandler}
-              defaultChecked
+              checked={plan == "arcade" ? true : false}
             />
             <label
-              className="flex h-full w-full flex-col rounded-md border-2 border-gray-300 p-4 hover:border-indigo-500 peer-checked:border-indigo-500 peer-checked:bg-gray-100"
+              className="flex h-full w-full flex-col rounded-md border-2 border-gray-300 p-4 hover:border-indigo-400 peer-checked:border-indigo-500 peer-checked:bg-gray-100"
               htmlFor="arcade"
             >
               <img
@@ -33,7 +33,7 @@ export default function Plan({ next, back, changeHandler }) {
               <p className="mt-auto font-UbuntuBold text-lg text-blue-700">
                 Arcade
               </p>
-              <p className="text-gray-500">$9/mo</p>
+              <p className="text-gray-500">{monthly ? "$9/mo" : "$90/yr"}</p>
             </label>
           </div>
 
@@ -45,9 +45,10 @@ export default function Plan({ next, back, changeHandler }) {
               id="advanced"
               value="advanced"
               onChange={changeHandler}
+              checked={plan == "advanced" ? true : false}
             />
             <label
-              className="flex h-full w-full flex-col rounded-md border-2 border-gray-300 p-4 hover:border-indigo-500 peer-checked:border-indigo-500 peer-checked:bg-gray-100"
+              className="flex h-full w-full flex-col rounded-md border-2 border-gray-300 p-4 hover:border-indigo-400 peer-checked:border-indigo-500 peer-checked:bg-gray-100"
               htmlFor="advanced"
             >
               <img
@@ -59,7 +60,7 @@ export default function Plan({ next, back, changeHandler }) {
               <p className="mt-auto font-UbuntuBold text-lg text-blue-700">
                 Advanced
               </p>
-              <p className="text-gray-500">$9/mo</p>
+              <p className="text-gray-500">{monthly ? "$12/mo" : "$120/yr"}</p>
             </label>{" "}
           </div>
 
@@ -71,9 +72,10 @@ export default function Plan({ next, back, changeHandler }) {
               id="pro"
               value="pro"
               onChange={changeHandler}
+              checked={plan == "pro" ? true : false}
             />
             <label
-              className="flex h-full w-full flex-col rounded-md border-2 border-gray-300 p-4 hover:border-indigo-500 peer-checked:border-indigo-500 peer-checked:bg-gray-100"
+              className="flex h-full w-full flex-col rounded-md border-2 border-gray-300 p-4 hover:border-indigo-400 peer-checked:border-indigo-500 peer-checked:bg-gray-100"
               htmlFor="pro"
             >
               <img
@@ -85,10 +87,28 @@ export default function Plan({ next, back, changeHandler }) {
               <p className="mt-auto font-UbuntuBold text-lg text-blue-700">
                 Pro
               </p>
-              <p className="text-gray-500">$9/mo</p>
+              <p className="text-gray-500">{monthly ? "$15/mo" : "$150/yr"}</p>
             </label>{" "}
           </div>
         </fieldset>
+        <div className="mt-6 flex items-center justify-center gap-4 rounded-md bg-gray-100 py-2 font-UbuntuMedium">
+          <input
+            type="checkbox"
+            name="monthly"
+            id="monthly"
+            className="peer hidden"
+            onChange={changeHandler}
+            checked={monthly}
+          />
+          <p className="text-gray-500 peer-checked:text-blue-700">Monthly</p>
+          <label
+            htmlFor="monthly"
+            className="h-6 w-10 rounded-3xl bg-blue-700 p-1"
+          >
+            <div className="relative float-right aspect-square h-4 rounded-full bg-white transition-all"></div>
+          </label>
+          <p className="text-blue-700 peer-checked:text-gray-500">Yearly</p>
+        </div>
       </div>
       <div className="controll flex w-full">
         <button
