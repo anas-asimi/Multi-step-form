@@ -44,9 +44,9 @@ export default function App() {
     });
   }
   return (
-    <main className="m-4 flex w-full max-w-[1000px] rounded-md bg-white p-4 pr-0">
+    <main className="flex h-full w-full max-w-[1000px] flex-col md:bg-white pr-0 md:m-4 md:h-auto md:flex-row md:rounded-md md:p-4">
       <Progress progress={progress} />
-      <div className="flex w-full flex-col justify-between px-24 py-4">
+      <div className="flex w-full h-full md:h-auto flex-col justify-between md:px-24 md:py-4">
         {progress == 1 ? (
           <Info
             changeHandler={changeHandler}

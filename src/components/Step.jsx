@@ -10,7 +10,7 @@ export default function Step(props) {
       >
         {props.number}
       </div>
-      <div>
+      <div className="hidden md:block">
         <p className="text-gray-300">step {props.number}</p>
         <p className="font-UbuntuMedium">{props.title}</p>
       </div>

@@ -39,7 +39,7 @@ export default function Info({
   }
   return (
     <>
-      <div className="h-full w-full">
+      <div className="h-full bg-white relative mx-6 p-8 rounded-lg bottom-16">
         <h1 className="mt-8 font-UbuntuBold text-3xl text-blue-700">
           Personal info
         </h1>
@@ -110,9 +110,9 @@ export default function Info({
         </div>
         {/* ===================== */}
       </div>
-      <div className="controll flex w-full">
+      <div className="controll flex w-full bg-white p-4 md:p-0">
         <button
-          className="mr-auto select-none rounded-md bg-transparent px-8 py-2 capitalize text-gray-600"
+          className="mr-auto select-none rounded-md bg-transparent px-8 py-2 capitalize text-gray-600 invisible"
           onClick={back}
         >
           go back

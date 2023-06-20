@@ -28,7 +28,7 @@ export default function Summary({
   }
   return (
     <>
-      <div className="h-full w-full">
+      <div className="relative bottom-16 mx-6 h-full rounded-lg bg-white p-8">
         <h1 className="mt-8 font-UbuntuBold text-3xl text-blue-700">
           Finishing up
         </h1>
@@ -87,12 +87,12 @@ export default function Summary({
         </div>
         <p className="m-6 text-gray-400">
           Total (per {monthly ? "month" : "year"})
-          <span className="float-right font-UbuntuBold text-blue-700">
+          <span className="float-right font-UbuntuBold text-blue-700 text-lg">
             {monthly ? `+${getTotal()}/mo` : `+${getTotal()}/yr`}
           </span>
         </p>
       </div>
-      <div className="controll flex w-full">
+      <div className="controll flex w-full bg-white p-4 md:p-0">
         <button
           className="mr-auto select-none rounded-md bg-transparent px-8 py-2 capitalize text-gray-600"
           onClick={back}

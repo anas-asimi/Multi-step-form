@@ -9,7 +9,7 @@ export default function Add_ons({
 }) {
   return (
     <>
-      <div className="h-full w-full">
+      <div className="relative bottom-16 mx-6 h-full rounded-lg bg-white p-8">
         <h1 className="mt-8 font-UbuntuBold text-3xl text-blue-700">
           Pick add-ons
         </h1>
@@ -82,7 +82,7 @@ export default function Add_ons({
           </span>
         </label>
       </div>
-      <div className="controll flex w-full">
+      <div className="controll flex w-full bg-white p-4 md:p-0">
         <button
           className="mr-auto select-none rounded-md bg-transparent px-8 py-2 capitalize text-gray-600"
           onClick={back}

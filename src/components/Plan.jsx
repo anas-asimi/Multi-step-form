@@ -1,16 +1,16 @@
 export default function Plan({ next, back, changeHandler, plan, monthly }) {
   return (
     <>
-      <div className="h-full w-full">
+      <div className="relative bottom-16 mx-6 h-full rounded-lg bg-white p-8">
         <h1 className="mt-8 font-UbuntuBold text-3xl text-blue-700">
           Select your plan
         </h1>
         <p className="mb-8 mt-2 text-gray-400">
           You have the option of monthly or yearly billing.
         </p>
-        <fieldset className="input-wrapper flex gap-4">
+        <fieldset className="input-wrapper flex flex-col gap-4">
           {/* ===================== */}
-          <div className="h-[180px] w-full">
+          <div className="w-full md:h-[180px]">
             <input
               className="peer hidden"
               type="radio"
@@ -21,7 +21,7 @@ export default function Plan({ next, back, changeHandler, plan, monthly }) {
               checked={plan == "arcade" ? true : false}
             />
             <label
-              className="flex h-full w-full flex-col rounded-md border-2 border-gray-300 p-4 hover:border-indigo-400 peer-checked:border-indigo-500 peer-checked:bg-gray-100"
+              className="flex w-full gap-4 rounded-md border-2 border-gray-300 p-4 hover:border-indigo-400 peer-checked:border-indigo-500 peer-checked:bg-gray-100 md:flex-col"
               htmlFor="arcade"
             >
               <img
@@ -30,14 +30,16 @@ export default function Plan({ next, back, changeHandler, plan, monthly }) {
                 height="48px"
                 width="48px"
               />
-              <p className="mt-auto font-UbuntuBold text-lg text-blue-700">
-                Arcade
-              </p>
-              <p className="text-gray-400">{monthly ? "$9/mo" : "$90/yr"}</p>
+              <div>
+                <p className="mt-auto font-UbuntuBold text-lg text-blue-700">
+                  Arcade
+                </p>
+                <p className="text-gray-400">{monthly ? "$9/mo" : "$90/yr"}</p>
+              </div>
             </label>
           </div>
           {/* ===================== */}
-          <div className="h-[180px] w-full">
+          <div className="w-full md:h-[180px]">
             <input
               className="peer hidden"
               type="radio"
@@ -48,7 +50,7 @@ export default function Plan({ next, back, changeHandler, plan, monthly }) {
               checked={plan == "advanced" ? true : false}
             />
             <label
-              className="flex h-full w-full flex-col rounded-md border-2 border-gray-300 p-4 hover:border-indigo-400 peer-checked:border-indigo-500 peer-checked:bg-gray-100"
+              className="flex w-full gap-4 rounded-md border-2 border-gray-300 p-4 hover:border-indigo-400 peer-checked:border-indigo-500 peer-checked:bg-gray-100 md:flex-col"
               htmlFor="advanced"
             >
               <img
@@ -57,14 +59,18 @@ export default function Plan({ next, back, changeHandler, plan, monthly }) {
                 height="48px"
                 width="48px"
               />
-              <p className="mt-auto font-UbuntuBold text-lg text-blue-700">
-                Advanced
-              </p>
-              <p className="text-gray-400">{monthly ? "$12/mo" : "$120/yr"}</p>
+              <div>
+                <p className="mt-auto font-UbuntuBold text-lg text-blue-700">
+                  Advanced
+                </p>
+                <p className="text-gray-400">
+                  {monthly ? "$12/mo" : "$120/yr"}
+                </p>
+              </div>
             </label>{" "}
           </div>
           {/* ===================== */}
-          <div className="h-[180px] w-full">
+          <div className="w-full md:h-[180px]">
             <input
               className="peer hidden"
               type="radio"
@@ -75,7 +81,7 @@ export default function Plan({ next, back, changeHandler, plan, monthly }) {
               checked={plan == "pro" ? true : false}
             />
             <label
-              className="flex h-full w-full flex-col rounded-md border-2 border-gray-300 p-4 hover:border-indigo-400 peer-checked:border-indigo-500 peer-checked:bg-gray-100"
+              className="flex w-full gap-4 rounded-md border-2 border-gray-300 p-4 hover:border-indigo-400 peer-checked:border-indigo-500 peer-checked:bg-gray-100 md:flex-col"
               htmlFor="pro"
             >
               <img
@@ -84,10 +90,14 @@ export default function Plan({ next, back, changeHandler, plan, monthly }) {
                 height="48px"
                 width="48px"
               />
-              <p className="mt-auto font-UbuntuBold text-lg text-blue-700">
-                Pro
-              </p>
-              <p className="text-gray-400">{monthly ? "$15/mo" : "$150/yr"}</p>
+              <div>
+                <p className="mt-auto font-UbuntuBold text-lg text-blue-700">
+                  Pro
+                </p>
+                <p className="text-gray-400">
+                  {monthly ? "$15/mo" : "$150/yr"}
+                </p>
+              </div>{" "}
             </label>
           </div>
           {/* ===================== */}
@@ -111,7 +121,7 @@ export default function Plan({ next, back, changeHandler, plan, monthly }) {
           <p className="text-blue-700 peer-checked:text-gray-400">Yearly</p>
         </div>
       </div>
-      <div className="controll flex w-full">
+      <div className="controll flex w-full bg-white p-4 md:p-0">
         <button
           className="mr-auto select-none rounded-md bg-transparent px-8 py-2 capitalize text-gray-600"
           onClick={back}

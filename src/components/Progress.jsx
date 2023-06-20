@@ -2,7 +2,7 @@ import Step from "./Step";
 
 export default function Progress({ progress }) {
   return (
-    <ul className="flex min-h-[568px] flex-col gap-10 rounded-lg bg-[url('/images/bg-sidebar-desktop.svg')] bg-cover bg-no-repeat bg-bottom p-12 pr-20 text-white">
+    <ul style={{backgroundPositionY:'85%'}} className="flex items-center justify-center gap-6 bg-[url('images/bg-sidebar-desktop.svg')] bg-cover bg-no-repeat p-12 pb-24 md:p-12 md:pr-20 text-white md:min-h-[568px] md:flex-col md:gap-10 md:rounded-lg md:bg-bottom">
       <li>
         <Step number={1} title="your info" active={progress == 1} />
       </li>
