@@ -4,7 +4,8 @@ export default function Add_ons({
   changeHandler,
   online_service,
   larger_storage,
-  customizable_profile
+  customizable_profile,
+  monthly,
 }) {
   return (
     <>
@@ -12,7 +13,7 @@ export default function Add_ons({
         <h1 className="mt-8 font-UbuntuBold text-3xl text-blue-700">
           Pick add-ons
         </h1>
-        <p className="mb-8 mt-2 text-gray-500">
+        <p className="mb-8 mt-2 text-gray-400">
           Add-ons help enhance your gaming experience.
         </p>
         {/* ===================== */}
@@ -30,8 +31,11 @@ export default function Add_ons({
           />
           <div>
             <p className="font-UbuntuMedium text-blue-700">Online services</p>
-            <p className="text-gray-500">Access to multiplayer games</p>
+            <p className="text-gray-400">Access to multiplayer games</p>
           </div>
+          <span className="ml-auto text-blue-700">
+            {monthly ? "+$1/mo" : "+$10/yr"}
+          </span>
         </label>
         {/* ===================== */}
         <label
@@ -48,8 +52,11 @@ export default function Add_ons({
           />
           <div>
             <p className="font-UbuntuMedium text-blue-700">Larger storage</p>
-            <p className="text-gray-500">Access to multiplayer games</p>
+            <p className="text-gray-400">Access to multiplayer games</p>
           </div>
+          <span className="ml-auto text-blue-700">
+            {monthly ? "+$2/mo" : "+$20/yr"}
+          </span>
         </label>
         {/* ===================== */}
         <label
@@ -68,8 +75,11 @@ export default function Add_ons({
             <p className="font-UbuntuMedium text-blue-700">
               Customizable profile
             </p>
-            <p className="text-gray-500">Access to multiplayer games</p>
+            <p className="text-gray-400">Access to multiplayer games</p>
           </div>
+          <span className="ml-auto text-blue-700">
+            {monthly ? "+$2/mo" : "+$20/yr"}
+          </span>
         </label>
       </div>
       <div className="controll flex w-full">

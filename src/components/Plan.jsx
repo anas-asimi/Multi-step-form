@@ -5,7 +5,7 @@ export default function Plan({ next, back, changeHandler, plan, monthly }) {
         <h1 className="mt-8 font-UbuntuBold text-3xl text-blue-700">
           Select your plan
         </h1>
-        <p className="mb-8 mt-2 text-gray-500">
+        <p className="mb-8 mt-2 text-gray-400">
           You have the option of monthly or yearly billing.
         </p>
         <fieldset className="input-wrapper flex gap-4">
@@ -33,7 +33,7 @@ export default function Plan({ next, back, changeHandler, plan, monthly }) {
               <p className="mt-auto font-UbuntuBold text-lg text-blue-700">
                 Arcade
               </p>
-              <p className="text-gray-500">{monthly ? "$9/mo" : "$90/yr"}</p>
+              <p className="text-gray-400">{monthly ? "$9/mo" : "$90/yr"}</p>
             </label>
           </div>
           {/* ===================== */}
@@ -60,7 +60,7 @@ export default function Plan({ next, back, changeHandler, plan, monthly }) {
               <p className="mt-auto font-UbuntuBold text-lg text-blue-700">
                 Advanced
               </p>
-              <p className="text-gray-500">{monthly ? "$12/mo" : "$120/yr"}</p>
+              <p className="text-gray-400">{monthly ? "$12/mo" : "$120/yr"}</p>
             </label>{" "}
           </div>
           {/* ===================== */}
@@ -87,7 +87,7 @@ export default function Plan({ next, back, changeHandler, plan, monthly }) {
               <p className="mt-auto font-UbuntuBold text-lg text-blue-700">
                 Pro
               </p>
-              <p className="text-gray-500">{monthly ? "$15/mo" : "$150/yr"}</p>
+              <p className="text-gray-400">{monthly ? "$15/mo" : "$150/yr"}</p>
             </label>
           </div>
           {/* ===================== */}
@@ -101,14 +101,14 @@ export default function Plan({ next, back, changeHandler, plan, monthly }) {
             onChange={changeHandler}
             checked={monthly}
           />
-          <p className="text-gray-500 peer-checked:text-blue-700">Monthly</p>
+          <p className="text-gray-400 peer-checked:text-blue-700">Monthly</p>
           <label
             htmlFor="monthly"
             className="h-6 w-10 rounded-3xl bg-blue-700 p-1"
           >
             <div className="relative float-right aspect-square h-4 rounded-full bg-white transition-all"></div>
           </label>
-          <p className="text-blue-700 peer-checked:text-gray-500">Yearly</p>
+          <p className="text-blue-700 peer-checked:text-gray-400">Yearly</p>
         </div>
       </div>
       <div className="controll flex w-full">

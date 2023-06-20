@@ -43,7 +43,7 @@ export default function Info({
         <h1 className="mt-8 font-UbuntuBold text-3xl text-blue-700">
           Personal info
         </h1>
-        <p className="mb-8 mt-2 text-gray-500">
+        <p className="mb-8 mt-2 text-gray-400">
           Please provide your name, email address, and phone number.
         </p>
         {/* ===================== */}

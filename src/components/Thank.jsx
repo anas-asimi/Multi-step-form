@@ -11,7 +11,7 @@ export default function Thank() {
         <h1 className="mt-4 font-UbuntuBold text-3xl text-blue-700">
           Thank you
         </h1>
-        <p className="mb-8 text-gray-500 text-center">
+        <p className="mb-8 text-gray-400 text-center">
           Thanks for confirming your subscription! We hope you have fun using
           our platform. If you ever need support, please feel free to email us
           at support@loremgaming.com.

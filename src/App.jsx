@@ -23,11 +23,13 @@ export default function App() {
     larger_storage: false,
     customizable_profile: false,
   });
-  function next() {
+  function next(x) {
+    if (typeof x == "number") return setProgress(x);
     if (progress == 5) return;
     setProgress((progress) => progress + 1);
   }
-  function back() {
+  function back(x) {
+    if (typeof x == "number") return setProgress(x);
     if (progress == 1) return;
     setProgress((progress) => progress - 1);
   }
@@ -42,7 +44,7 @@ export default function App() {
     });
   }
   return (
-    <main className="rounded-md m-4 flex w-full max-w-[1000px] bg-white p-4 pr-0">
+    <main className="m-4 flex w-full max-w-[1000px] rounded-md bg-white p-4 pr-0">
       <Progress progress={progress} />
       <div className="flex w-full flex-col justify-between px-24 py-4">
         {progress == 1 ? (
