@@ -39,7 +39,7 @@ export default function Info({
   }
   return (
     <>
-      <div className="h-full bg-white relative mx-6 p-8 rounded-lg bottom-16">
+      <div className="relative bottom-16 mx-6 h-full rounded-lg bg-white p-8 md:static">
         <h1 className="mt-8 font-UbuntuBold text-3xl text-blue-700">
           Personal info
         </h1>
@@ -112,7 +112,7 @@ export default function Info({
       </div>
       <div className="controll flex w-full bg-white p-4 md:p-0">
         <button
-          className="mr-auto select-none rounded-md bg-transparent px-8 py-2 capitalize text-gray-600 invisible"
+          className="invisible mr-auto select-none rounded-md bg-transparent px-8 py-2 capitalize text-gray-600"
           onClick={back}
         >
           go back
