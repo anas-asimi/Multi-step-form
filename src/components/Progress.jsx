@@ -4,7 +4,7 @@ export default function Progress({ progress }) {
   return (
     <ul
       style={{ backgroundPositionY: "85%" }}
-      className="flex items-center justify-center gap-6 bg-[url('images/bg-sidebar-desktop.svg')] bg-cover bg-no-repeat p-12 pb-24 text-white md:min-h-[568px] md:flex-col md:justify-start md:gap-10 md:rounded-lg md:bg-bottom md:p-12 md:pr-20"
+      className="flex items-center justify-center gap-6 bg-[url('/images/bg-sidebar-desktop.svg')] bg-cover bg-no-repeat p-12 pb-24 text-white md:min-h-[568px] md:flex-col md:justify-start md:gap-10 md:rounded-lg md:bg-bottom md:p-12 md:pr-20"
     >
       <li className="md:w-full">
         <Step number={1} title="your info" active={progress == 1} />
