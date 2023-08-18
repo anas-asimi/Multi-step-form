@@ -75,5 +75,5 @@ const proudOfThisFunc = () => {
 
 ## Author
 
-- Website - [anas asimo](https://asimianas.netlify.app)
-- Facebook - [@yourusername](https://web.facebook.com/AnasAssimi10)
+- Website - [anas asimi](https://asimianas.netlify.app)
+- Facebook - [anas asimi](https://web.facebook.com/AnasAssimi10)
